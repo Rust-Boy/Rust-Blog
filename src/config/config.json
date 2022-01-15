@@ -5,10 +5,10 @@
     "workers": "4"
   },
   "mysql": {
-    "username": "webTest",
-    "password": "tmp0423chj",
-    "address": "180.102.18.74",
-    "port": "3306",
-    "dbname": "webTest"
+    "username": "Mysel用户名",
+    "password": "MySQL密码",
+    "address": "MySQL地址",
+    "port": "MySQL端口",
+    "dbname": "数据库名"
   }
 }
