@@ -1,37 +1,96 @@
 # Rust Blog
 
-#### 介绍
-这是一个由 actix-web 框架写成的博客小 demo，不到 1k 行，基本功能完备
-
-#### 软件架构
-软件架构说明
+> 这是一个由 actix-web 写成的练手 demo，一个博客后端框架
+>
+> 	前后端分离
 
 
-#### 安装教程
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+部署
 
-#### 使用说明
+```cmd
+cargo run
+```
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
-
-#### 参与贡献
-
-1.  Fork 本仓库
-2.  新建 Feat_xxx 分支
-3.  提交代码
-4.  新建 Pull Request
+部署前请确保 config.json 已经配置好
 
 
-#### 特技
 
-1.  使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
-2.  Gitee 官方博客 [blog.gitee.com](https://blog.gitee.com)
-3.  你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解 Gitee 上的优秀开源项目
-4.  [GVP](https://gitee.com/gvp) 全称是 Gitee 最有价值开源项目，是综合评定出的优秀开源项目
-5.  Gitee 官方提供的使用手册 [https://gitee.com/help](https://gitee.com/help)
-6.  Gitee 封面人物是一档用来展示 Gitee 会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
+
+
+
+
+## 项目描述
+
+```txt
+一、前后端分离，耦合低，易与前端组合
+二、支持文章的增删改查
+三、管理员信息修改、对网站外显修改
+四、留言板功能
+五、评论功能
+```
+
+
+
+
+
+## API 文档
+
+
+
+### 一、页面
+
+| api  | 描述            |
+| ---- | --------------- |
+| /    | 返回 index.html |
+
+
+
+
+
+### 二、管理员
+
+| api                                | 描述                     |
+| ---------------------------------- | ------------------------ |
+| /admin/login                       | 管理员登录               |
+| /admin/update                      | 管理员修改账号密码       |
+| /admin/addPage                     | 管理员新增文章           |
+| /admin/delPage/{id}                | 管理员删除文章           |
+| /admin/website/indexMessage/update | 管理员修改首页展示的信息 |
+
+
+
+
+
+### 三、访客
+
+| api               | 描述         |
+| ----------------- | ------------ |
+| /vistor/addComit  | 访客添加留言 |
+| /vistor/addFriend | 访客添加友链 |
+
+
+
+
+
+### 四、网站外显信息
+
+| api                          | 描述                   |
+| ---------------------------- | ---------------------- |
+| /website/friend              | 返回友链列表，json格式 |
+| /website/indexMessage/show   | 返回首页展示信息       |
+| /website/indexMessage/update | 首页展示信息修改       |
+
+
+
+
+
+### 五、Blog
+
+| api                    | 描述                                 |
+| ---------------------- | ------------------------------------ |
+| /blog/commit/{id}/show | 根据id加载对应文章评论，json格式返回 |
+| /blog/commit/{id}/add  | 向指定id的文章插入一条评论           |
+| /blog/list             | 返回博客文章列表                     |
+| /blog/hotPage          | 热门文章，json格式返回               |
+
