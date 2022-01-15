@@ -1,0 +1,16 @@
+[package]
+name = "blog01"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+mysql = "*"
+chrono = "0.4"
+json = "*"
+actix-web = "3"
+serde = "1.0.132"
+rust-crypto = "^0.2"
+jwt = "0.16.0"
+actix-files = "0.6.0-beta.12"
